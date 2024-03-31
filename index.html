@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel IPTV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Usando font-awesome para ícones -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="htdocs/para/o/seu/favicon.png" id="favicon">
+  <style>
+    /* Estilos para o bilhete de alerta */
+    .alert-message {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #1100ff; /* Cor de fundo do bilhete */
+      color: #fff; /* Cor do texto */
+      padding: 10px 20px; /* Espaçamento interno */
+      border-radius: 5px; /* Borda arredondada */
+      z-index: 9999; /* Garante que o bilhete esteja acima de outros elementos */
+      animation: slideIn 0.5s ease-in-out forwards;
+      display: none;
+    }
+
+    /* Animação de slide-in */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="login_box">
+    <div class="login-header">
+      <span>Login</span>
+    </div>
+
+    <div class="input_box">
+      <input type="text" id="user" class="input-field" required>
+      <label for="user" class="label">Usuário</label>
+      <i class="fas fa-user icon"></i> <!-- Usando font-awesome icon -->
+    </div>
+  
+    <div class="input_box">
+      <input type="password" id="pass" class="input-field" required>
+      <label for="pass" class="label">Senha</label>
+      <i class="fas fa-lock icon"></i> <!-- Usando font-awesome icon -->
+    </div>
+  
+    <div class="remember-forgot">
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Lembre de mim</label>
+      </div>
+
+      <div class="forgot">
+        <a href="#">Esqueceu sua senha?</a>
+      </div>
+    </div>
+
+    <div class="input_box">
+      <!-- Troquei o input por um botão com animação hover -->
+      <button class="input-submit" onclick="window.location.href='https://youtube.com'">Entrar</button>
+    </div>
+
+    <div class="register">
+      <span>Não tem uma conta? <a href="#">Registrar</a></span>
+    </div>
+  </div>
+</div>
+
+<!-- Bilhete de alerta -->
+<div class="alert-message">Filmes Atualizados</div>
+
+<script>
+  // Mostrar o bilhete de alerta após um atraso
+  setTimeout(function() {
+    document.querySelector('.alert-message').style.display = 'block';
+  }, 2000); // Mostrar após 2 segundos
+</script>
+
+</body>
+</html>
